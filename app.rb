@@ -34,6 +34,12 @@ post "/stores/:id" do
   redirect "/stores/#{store_id}"
 end
 
+patch "/stores/:id" do
+  store_id = params['id'].to_i
+  updated_storename = params['storename']
+  Store.find(store_id).update({storename: updated_storename})
+  redirect "/stores/#{store_id}"
+end
 
 # Brands Routing
 get "/brands" do
