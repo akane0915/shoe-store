@@ -4,8 +4,14 @@ class Brand < ActiveRecord::Base
   validates :brandname, presence: true, uniqueness: true, length: { maximum: 100 }
 
   def currency_format
-    currency_price = price.to_s
-    "$#{currency_price}0"
+    currency_price = nil
+    if price == 0
+      currency_price = "$0.00"
+    else
+      currency_price = price.to_s
+      currency_price = "$#{currency_price}0"
+    end
+    currency_price
   end
 
   private
