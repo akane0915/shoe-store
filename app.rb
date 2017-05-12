@@ -37,3 +37,9 @@ post "/brands" do
   new_brand = Brand.create({brandname: brandname, price: price})
   redirect "/brands"
 end
+
+get "/brands/:id" do
+  brand_id = params["id"].to_i
+  @brand = Brand.find(brand_id)
+  erb :brand
+end
