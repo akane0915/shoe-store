@@ -64,6 +64,8 @@ delete "/stores/:id" do
   redirect "/stores"
 end
 
+
+
 # Brands Routing
 get "/brands" do
   @brands = Brand.all
@@ -85,4 +87,22 @@ get "/brands/:id" do
   brand_id = params["id"].to_i
   @brand = Brand.find(brand_id)
   erb :brand
+end
+
+patch "/brands/:id" do
+  brand_id = params["id"].to_i
+  brand = Brand.find(brand_id)
+
+  unless params['brandname'] == ""
+    updated_brandname = params['brandname']
+    brand.update({brandname: updated_brandname})
+
+  end
+
+  unless params['price'] == ""
+    updated_price = params['price']
+    brand.update({price: updated_price})
+  end
+  redirect "/brands/#{brand_id}"
+
 end

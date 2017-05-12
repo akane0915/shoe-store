@@ -1,5 +1,7 @@
 <h1> <%= @brand.brandname %> </h1>
 <br>
+
+<!-- Brand Details -->
 <h4> Brand Price:  <%= @brand.currency_format %> </h4>
 <br>
 <h4>Stores That Sell <%= @brand.brandname %> :  </h4>
@@ -8,3 +10,23 @@
   <li> <%= store.storename %> </li>
   <% end %>
 </ul>
+
+<!-- Update the Brand Name and/or Brand Price-->
+<h1>Update the <%= @brand.brandname %> Brand</h1>
+<br>
+
+<form action="/brands/<%= @brand.id %>" method="post">
+
+  <input type="hidden" name="_method" value="patch">
+
+  <input type="hidden" name="brand_id" value="<%= @brand.id() %>">
+
+  <label for="brandname">Rename Brand : </label>
+  <input type="text" name="brandname">
+
+  <label for="price">Update Brand Price : $</label>
+  <input type="text" name="price">
+
+  <button class="btn btn-default" type="submit">Update Brand</button>
+</form>
+<br><br>
