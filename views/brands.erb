@@ -1,0 +1,37 @@
+<!-- List of All Brands -->
+<% if @brands == [] %>
+  <p>There are currently no brands saved</p>
+<% else %>
+  <h1>Your Brands</h1>
+  <table class="table">
+     <thead>
+       <tr>
+         <th>Brand</th>
+         <th>Price</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @brands.each do |brand| %>
+
+         <tr>
+           <td><a href="/brands/<%= brand.id() %>"><%= brand.brandname %></a></td>
+           <td><%= brand.currency_format %></td>
+         </tr>
+
+       <% end %>
+     </tbody>
+   </table>
+<% end %>
+
+<hr>
+<!-- Add a Brand Form -->
+<h1>Add a Brand</h1>
+<form action="brands" method="post">
+  <label for="brandname">Brand Name:</label>
+  <input type="text" name="brandname">
+
+  <label for="price">Brand Price:</label>
+  <input type="text" name="price">
+
+  <button class="btn btn-default" type="submit">Add Brand</button>
+</form>
