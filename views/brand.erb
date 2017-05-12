@@ -1,3 +1,10 @@
 <h1> <%= @brand.brandname %> </h1>
 <br>
 <h4> Brand Price:  <%= @brand.currency_format %> </h4>
+<br>
+<h4>Stores That Sell <%= @brand.brandname %> :  </h4>
+<ul>
+  <% @brand.stores.each do |store| %>
+  <li> <%= store.storename %> </li>
+  <% end %>
+</ul>
