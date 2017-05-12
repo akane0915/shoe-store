@@ -45,10 +45,9 @@ Bundler
 * _In a terminal window, clone this repository to your machine and navigate to the file path in your terminal and open the file in the text editor of your choice._
 * _Run $bundle_
 * _Set up a development database and test database in SQL (see instructions below)_
-* _Run $ruby app.rb_
+* _In terminal window, run $ruby app.rb_
 * _Type localhost:4567 in a browser window to view application_
-* _If you would like to make changes, open files in text editor of your choice_
-* _Make changes as desired_
+* _If you would like to make changes, do so in the text editor_
 * _Make frequent commits with detailed comments_
 * _Submit changes as pull request to Asia at akane0915 on Github_
 
@@ -60,9 +59,7 @@ Bundler
 
 * _$ rake db:create_
 * _$ rake db:migrate_
-* _CREATE TABLE projects (id serial PRIMARY KEY, title varchar);_
-* _CREATE TABLE volunteers (id serial PRIMARY KEY, name varchar, hours int, project_id int);_
-* _CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;_
+* _$ rake db:test:prepare_
 
 ## Known Bugs
 _N/A_
@@ -75,7 +72,7 @@ _I encourage you to update/make suggestions/refactor this code as you see fit. I
 * Sinatra
 * SQL Relational Database Management System
 * Postgres Database Management System
-* Psql
+* Active Record
 * Capybara Integration Testing
 * Rspec Gem
 * Pg Gem
@@ -83,7 +80,6 @@ _I encourage you to update/make suggestions/refactor this code as you see fit. I
 * CSS
 * Bootstrap https://getbootstrap.com/
 * ES6
-* Jquery https://jquery.com/
 
 
 ### License
