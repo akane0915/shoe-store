@@ -59,3 +59,14 @@
 
   <button class="btn btn-default" type="submit">Update Store Name</button>
 </form>
+<br>
+
+<!-- Delete this Store -->
+<form action="/stores/<%= @store.id %>" method="post">
+
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="hidden" name="store_id" value="<%= @store.id() %>">
+
+  <button class="btn btn-danger" type="submit">Delete This Store</button>
+</form>

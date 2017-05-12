@@ -41,6 +41,12 @@ patch "/stores/:id" do
   redirect "/stores/#{store_id}"
 end
 
+delete "/stores/:id" do
+  store_id = params['id'].to_i
+  Store.find(store_id).destroy
+  redirect "/stores"
+end
+
 # Brands Routing
 get "/brands" do
   @brands = Brand.all
