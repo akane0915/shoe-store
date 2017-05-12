@@ -1,7 +1,8 @@
 <h1> <%= @store.storename %> </h1>
 
 <!-- Store Details -->
-<h3>Brands at the <%= @store.storename %> Store:</h3>
+<h4>Brands at the <%= @store.storename %> Store:</h4>
+<br>
 
 <% if @store.brands == [] %>
   <p>There are currently no brands saved to this store.</p>
@@ -25,7 +26,7 @@
      </tbody>
    </table>
 <% end %>
-<hr>
+<br><hr><br>
 
 <!-- Add a Brand to this Store -->
 <h1>Add a Brand to the <%= @store.storename %> Store</h1>
@@ -44,7 +45,7 @@
 
   <button class="btn btn-default" type="submit">Add Brand to <%= @store.storename %> Store</button>
 </form>
-<hr><br>
+<br><hr><br>
 
 <!-- Update the Store Name-->
 <h1>Update the <%= @store.storename %> Store</h1>

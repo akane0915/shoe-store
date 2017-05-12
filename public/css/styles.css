@@ -1,5 +1,39 @@
-h1 {
+body{
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Inconsolata', monospace;
+}
+
+h1, h3 {
   text-align: center;
+}
+
+.navbar {
+  background-image: url('../img/track.jpeg');
+  background-position: bottom;
+  min-height: 400px;
+}
+
+.nav-bar-background{
+  background-color: white;
+}
+
+.nav-text {
+  font-size: 2em;
+  letter-spacing: 2px;
+  font-family: 'Inconsolata', monospace;
+  color: black;
+}
+
+a.nav-text {
+  color: white;
+}
+
+.nav-bar-link{
+  padding: 0 20px 0 20px;
 }
 
 form {
