@@ -56,11 +56,10 @@ Bundler
 
 * _If Postgres is not installed on your computer, follow these instructions https://www.learnhowtoprogram.com/ruby/ruby-database-basics/installing-postgres-7fb0cff7-a0f5-4b61-a0db-8a928b9f67ef_
 * _In a new terminal tab, Run $postgres and leave it running_
-* _In another terminal tab, run $psql_
-* _Type the following:_
+* _In another terminal tab, type the following:_
 
-* _CREATE DATABASE volunteer_tracker;_
-* _\c volunteer_tracker_
+* _$ rake db:create_
+* _$ rake db:migrate_
 * _CREATE TABLE projects (id serial PRIMARY KEY, title varchar);_
 * _CREATE TABLE volunteers (id serial PRIMARY KEY, name varchar, hours int, project_id int);_
 * _CREATE DATABASE volunteer_tracker_test WITH TEMPLATE volunteer_tracker;_
