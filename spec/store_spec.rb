@@ -32,8 +32,8 @@ describe(Store) do
   end
 
   it "validates the storename is unique before saving" do
-    store1 = Store.create({storename: "portland"})
-    store2 = Store.create({storename: "Portland"})
+    store1 = Store.create({storename: "Portland"})
+    store2 = Store.new({storename: "portland"})
     expect(store2.save).to eq false
   end
 

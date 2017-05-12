@@ -38,7 +38,7 @@ describe(Brand) do
 
   it "validates the brandname is unique before saving" do
     brand1 = Brand.create({brandname: "adidas"})
-    brand2 = Brand.create({brandname: "adidas"})
+    brand2 = Brand.new({brandname: "adidas"})
     expect(brand2.save).to eq false
   end
 
