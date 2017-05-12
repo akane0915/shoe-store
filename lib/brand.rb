@@ -18,6 +18,4 @@ class Brand < ActiveRecord::Base
     def capitalize_brandname
       brandname.capitalize!
     end
-
-
 end

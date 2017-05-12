@@ -17,9 +17,7 @@
 <br>
 
 <form action="/brands/<%= @brand.id %>" method="post">
-
   <input type="hidden" name="_method" value="patch">
-
   <input type="hidden" name="brand_id" value="<%= @brand.id() %>">
 
   <label for="brandname">Rename Brand : </label>
@@ -35,9 +33,7 @@
 
 <!-- Delete this Brand -->
 <form action="/brands/<%= @brand.id %>" method="post">
-
   <input type="hidden" name="_method" value="delete">
-
   <input type="hidden" name="brand_id" value="<%= @brand.id() %>">
 
   <button class="btn btn-danger" type="submit">Delete This Brand</button>

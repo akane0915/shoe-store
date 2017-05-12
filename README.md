@@ -90,15 +90,16 @@ _I encourage you to update/make suggestions/refactor this code as you see fit. I
 Copyright © 2017 **Asia Kane**
 
 ### Screen Shots
-_Homepage_
+
+### Homepage
 ![Homepage](/public/img/homepage.png)
-_Stores Page_
+### Stores Page
 ![Stores Page](/public/img/stores.png)
-_Store Detail Page_
+### Store Detail Page
 ![Stores Detail Page](/public/img/store.png)
-_Brands Page_
+### Brands Page
 ![Brands Page](/public/img/brands.png)
-_Brand Detail Page_
+### Brand Detail Page
 ![Brand Detail Page](/public/img/brand.png)
-_Error Page_
+### Error Page
 ![Error Page](/public/img/errors.png)
