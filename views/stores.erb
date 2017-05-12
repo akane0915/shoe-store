@@ -1,0 +1,13 @@
+<!-- List of All Stores -->
+<% if @stores == [] %>
+  <p>There are currently no stores saved</p>
+<% else %>
+  <h1>Your Stores</h1>
+  <ul>
+    <% @stores.each do |store| %>
+      <li><%= store.storename %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<hr>
