@@ -12,8 +12,8 @@ describe("the brand creation path", {:type => :feature}) do
   end
 end
 
-describe("the brand update", {:type => :feature}) do
-  it("starts at the homepage and creates a new brand") do
+describe("the brand update path", {:type => :feature}) do
+  it("starts on the brands page and updates a brand") do
     brand = Brand.create({brandname: 'lulu'})
     visit("/brands")
     click_link('Lulu')
@@ -22,5 +22,14 @@ describe("the brand update", {:type => :feature}) do
     fill_in('price', :with => 100)
     click_button('Update Brand')
     expect(page).to have_content('Lululemon')
+  end
+end
+
+describe("the brand deletion path", {:type => :feature}) do
+  it("starts on the brand page and deletes the brand") do
+    brand = Brand.create({brandname: 'lulu'})
+    visit("/brands/#{brand.id}")
+    click_button('Delete This Brand')
+    expect(page).to have_no_content('Lulu')
   end
 end
