@@ -25,4 +25,10 @@ describe(Store) do
       expect(store.storename). to eq "Portland"
     end
   end
+
+  it "validates the storename is unique before saving" do
+    store1 = Store.create({storename: "portland"})
+    store2 = Store.create({storename: "Portland"})
+    expect(store2.save). to eq false
+  end
 end
