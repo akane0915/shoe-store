@@ -1,1 +1,27 @@
 <h1> <%= @store.storename %> </h1>
+
+<!-- Store Details -->
+<h3>Brands at the <%= @store.storename %> Store:</h3>
+
+<% if @store.brands == [] %>
+  <p>There are currently no brands saved to this store.</p>
+<% else %>
+  <table class="table">
+     <thead>
+       <tr>
+         <th>Brand</th>
+         <th>Price</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @store.brands.each do |brand| %>
+
+         <tr>
+           <td><a href="/brands/<%= brand.id() %>"><%= brand.brandname %></a></td>
+           <td><%= brand.currency_format %></td>
+         </tr>
+
+       <% end %>
+     </tbody>
+   </table>
+<% end %>
