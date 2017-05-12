@@ -1,0 +1,21 @@
+<h1>Oops, there was an error! </h1>
+
+<% if @new_store %>
+  <ul>
+    <% @new_store.errors.full_messages.each do |message| %>
+      <li> <%= message %> </li>
+    <% end%>
+  </ul>
+  <br>
+  <a class="btn btn-default" href="/stores">Go Back</a>
+<%end%>
+
+<% if @new_brand %>
+  <ul>
+    <% @new_brand.errors.full_messages.each do |message| %>
+      <li> <%= message %> </li>
+    <% end%>
+  </ul>
+  <br>
+  <a class="btn btn-default" href="/brands">Go Back</a>
+<%end%>
