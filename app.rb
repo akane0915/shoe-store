@@ -16,3 +16,9 @@ post "/stores" do
   new_store = Store.create({storename: storename})
   redirect "/stores"
 end
+
+get "/stores/:id" do
+  store_id = params['id'].to_i
+  @store = Store.find(store_id)
+  erb :store
+end

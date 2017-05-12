@@ -5,7 +5,7 @@
   <h1>Your Stores</h1>
   <ul>
     <% @stores.each do |store| %>
-      <li><%= store.storename %></li>
+      <li><a href="stores/<%= store.id %>"><%= store.storename %></a></li>
     <% end %>
   </ul>
 <% end %>
