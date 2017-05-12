@@ -3,14 +3,14 @@ require "spec_helper"
 describe(Store) do
   it {should have_and_belong_to_many :brands}
 
-
+  describe "#brands" do
     it "returns the store's storename" do
       store = Store.create({storename: "Portland"})
       brand = Brand.create({brandname: "Adidas"})
       store.brands.push(brand)
       expect(store.brands). to eq [brand]
     end
-
+  end
 
   describe "#storename" do
     it "returns the store's storename" do

@@ -30,4 +30,12 @@ describe(Brand) do
       expect(brand.currency_format). to eq "$20.00"
     end
   end
+
+  it "validates the brandname is unique before saving" do
+    brand1 = Brand.create({brandname: "adidas"})
+    brand2 = Brand.create({brandname: "adidas"})
+    expect(brand2.save). to eq false
+  end
+
+
 end
