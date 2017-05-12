@@ -47,4 +47,5 @@ describe(Brand) do
     expect(brand.save).to eq false
   end
 
+
 end

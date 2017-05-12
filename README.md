@@ -28,6 +28,8 @@ The following MVP user story requirements have been met for this application:
 
 The following additional user stories have been met:
 * As a user, I want to be able to remove brands from a store.
+* As a user, I want to be able to update a brand name and price.
+* As a user, I want to be able to delete a brand.
 
 
 ### Prerequisites
