@@ -21,7 +21,17 @@ end
 get "/stores/:id" do
   store_id = params['id'].to_i
   @store = Store.find(store_id)
+  @list_brands = Brand.all
   erb :store
+end
+
+post "/stores/:id" do
+  store_id = params['id'].to_i
+  brand_id = params['brand'].to_i
+  store = Store.find(store_id)
+  brand = Brand.find(brand_id)
+  store.brands.push(brand)
+  redirect "/stores/#{store_id}"
 end
 
 
