@@ -31,6 +31,11 @@ describe(Brand) do
     end
   end
 
+  it "validates the brandname is not blank before saving" do
+    brand1 = Brand.new({brandname: ""})
+    expect(brand1.save).to eq false
+  end
+
   it "validates the brandname is unique before saving" do
     brand1 = Brand.create({brandname: "adidas"})
     brand2 = Brand.create({brandname: "adidas"})

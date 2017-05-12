@@ -26,6 +26,11 @@ describe(Store) do
     end
   end
 
+  it "validates the storename is not blank before saving" do
+    store1 = Store.new({storename: ""})
+    expect(store1.save).to eq false
+  end
+
   it "validates the storename is unique before saving" do
     store1 = Store.create({storename: "portland"})
     store2 = Store.create({storename: "Portland"})
