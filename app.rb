@@ -104,5 +104,10 @@ patch "/brands/:id" do
     brand.update({price: updated_price})
   end
   redirect "/brands/#{brand_id}"
+end
 
+delete "/brands/:id" do
+  brand_id = params["id"].to_i
+  Brand.find(brand_id).destroy
+  redirect "/brands"
 end

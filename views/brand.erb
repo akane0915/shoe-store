@@ -30,3 +30,14 @@
   <button class="btn btn-default" type="submit">Update Brand</button>
 </form>
 <br><br>
+
+
+<!-- Delete this Brand -->
+<form action="/brands/<%= @brand.id %>" method="post">
+
+  <input type="hidden" name="_method" value="delete">
+
+  <input type="hidden" name="brand_id" value="<%= @brand.id() %>">
+
+  <button class="btn btn-danger" type="submit">Delete This Brand</button>
+</form>
