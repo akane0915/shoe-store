@@ -44,9 +44,11 @@
 
   <button class="btn btn-default" type="submit">Add Brand to <%= @store.storename %> Store</button>
 </form>
+<hr><br>
 
-<!-- Update the Store Name -->
+<!-- Update the Store Name-->
 <h1>Update the <%= @store.storename %> Store</h1>
+<br>
 
 <form action="/stores/<%= @store.id %>" method="post">
 
@@ -59,7 +61,28 @@
 
   <button class="btn btn-default" type="submit">Update Store Name</button>
 </form>
-<br>
+<br><br>
+
+<!-- Remove a Brand from this store-->
+<form action="/stores/<%= @store.id %>" method="post">
+
+  <input type="hidden" name="_method" value="patch">
+
+  <input type="hidden" name="store_id" value="<%= @store.id() %>">
+
+  <label for="brand_to_remove_id">Remove Brand:</label>
+  <select name="brand_to_remove_id">
+    <option value=""></option>
+    <% @store_brands.each() do |brand| %>
+      <option value="<%= brand.id() %>"><%= brand.brandname %></option>
+    <% end %>
+  </select>
+
+  <button class="btn btn-default" type="submit">Remove This Brand</button>
+</form>
+<br><hr><br>
+
+
 
 <!-- Delete this Store -->
 <form action="/stores/<%= @store.id %>" method="post">

@@ -26,6 +26,7 @@ get "/stores/:id" do
   store_id = params['id'].to_i
   @store = Store.find(store_id)
   @list_brands = Brand.all
+  @store_brands = @store.brands
   erb :store
 end
 
@@ -40,8 +41,20 @@ end
 
 patch "/stores/:id" do
   store_id = params['id'].to_i
-  updated_storename = params['storename']
-  Store.find(store_id).update({storename: updated_storename})
+  store = Store.find(store_id)
+
+  if params['storename']
+    updated_storename = params['storename']
+    store.update({storename: updated_storename})
+  else
+  end
+
+  if params['brand_to_remove_id']
+    brand_to_remove_id = params['brand_to_remove_id'].to_i
+    brand_to_remove = Brand.find(brand_to_remove_id)
+    store.brands.destroy(brand_to_remove)
+  else
+  end
   redirect "/stores/#{store_id}"
 end
 

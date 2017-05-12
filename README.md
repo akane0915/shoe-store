@@ -12,7 +12,7 @@ The application contains two database tables: brands and stores. This applicatio
 
 ![SQL DB structure](/public/img/sql-database.png)
 
-The following user stories have been met for this application:
+The following MVP user story requirements have been met for this application:
 
 * As a user, I want to be able to add, update, delete and list shoe stores.
 * As a user, I want to be able to add and list new shoe brands. Shoe brands should include price.
@@ -25,6 +25,9 @@ The following user stories have been met for this application:
 * As a user, I do not want stores and/or shoe brands to be saved if I enter a blank name.
 * As a user, I want all stores and brands to be unique. There shouldn't be two entries in the database for Blundstone.
 * As a user, I want store and brand names to have a maximum of one hundred characters.
+
+The following additional user stories have been met:
+* As a user, I want to be able to remove brands from a store.
 
 
 ### Prerequisites
