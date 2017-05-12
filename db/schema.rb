@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170512154813) do
+ActiveRecord::Schema.define(version: 20170512155804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20170512154813) do
     t.decimal "price", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "brands_stores", id: false, force: :cascade do |t|
+    t.bigint "brand_id", null: false
+    t.bigint "store_id", null: false
+    t.index ["brand_id", "store_id"], name: "index_brands_stores_on_brand_id_and_store_id"
   end
 
   create_table "stores", force: :cascade do |t|
