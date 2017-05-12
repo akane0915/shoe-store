@@ -6,7 +6,7 @@
 
 ## Description
 
-This application is intended for a shoe company to use internally to track various shoe brands and the stores at which each brand is sold. The application can store multiple shoe brands and multiple shoe stores and practices a many-to-many relationship.
+This application is intended for a shoe company to use internally to track various shoe brands and the stores at which each brand is sold. The application can store multiple shoe brands and multiple shoe stores and practices a many-to-many relationship.  It utilizes Ruby on Rails Active Record including Migrations, Validations, Callbacks, and Redirects as well as the Rake Ruby Gem.
 
 The application contains two database tables: brands and stores. This application uses RESTFUL routing.  
 
@@ -30,7 +30,7 @@ The following additional user stories have been met:
 * As a user, I want to be able to remove brands from a store.
 * As a user, I want to be able to update a brand name and price.
 * As a user, I want to be able to delete a brand.
-
+* As a user, I want to be taken to an error page if my input is not accepted.
 
 ### Prerequisites
 
@@ -43,8 +43,7 @@ Bundler
 ## Specifications
 | Behavior |  Input   |  Output  |
 |----------|:--------:|:--------:|
-
-
+|See user stories listed above | N/A | N/A |
 
 ## Setup/Installation Requirements
 * _In a terminal window, clone this repository to your machine and navigate to the file path in your terminal and open the file in the text editor of your choice._
@@ -77,16 +76,29 @@ _I encourage you to update/make suggestions/refactor this code as you see fit. I
 * Sinatra
 * SQL Relational Database Management System
 * Postgres Database Management System
-* Active Record
+* Active Record including Migrations, Validations, Callbacks, and Redirects
 * Capybara Integration Testing
 * Rspec Gem
-* Pg Gem
+* Rake Gem
 * HTML
 * CSS
 * Bootstrap https://getbootstrap.com/
 * ES6
 
-
 ### License
 *This software is licensed under the MIT license*
 Copyright © 2017 **Asia Kane**
+
+### Screen Shots
+_Homepage_
+![Homepage](/public/img/homepage.png)
+_Stores Page_
+![Stores Page](/public/img/stores.png)
+_Store Detail Page_
+![Stores Detail Page](/public/img/store.png)
+_Brands Page_
+![Brands Page](/public/img/brands.png)
+_Brand Detail Page_
+![Brand Detail Page](/public/img/brand.png)
+_Error Page_
+![Error Page](/public/img/errors.png)
