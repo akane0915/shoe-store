@@ -2,6 +2,8 @@
 
 #### _A web application for a shoe company to to track various shoe brands and the stores at which each brand is sold.  Each store sells many shoe brands and each brand is sold at many stores.  May 12, 2017_
 
+_View this project at: https://powerful-oasis-47226.herokuapp.com/ _
+
 #### By _**Asia Kane**_
 
 ## Description
